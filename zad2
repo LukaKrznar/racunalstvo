@@ -1,20 +1,28 @@
 #include <iostream>
 #include <cstdlib>
+
 using namespace std;
 
-int main() 
+int main()
 {
-	string recenica;
-	int brojac=0;
-	getline(cin,recenica);
-	for(int i=0; i<=recenica.length(); i++) {
-		if(recenica[i]==' '||recenica[i]=='.'||recenica[i]=='!'||recenica[i]=='?') brojac++;
-		
-		if(recenica[i]!=' ') cout<<recenica[i];
-		else if (recenica[i]==' ') cout<<", ";
-		
-		}
-	cout<<endl<<"Recenica ima "<<brojac<<" rijeci."<<endl;	
-	system("PAUSE");
+	string x;
+	int c = 0;
+	getline(cin, x);
+	
+	for(int i = 0; i<=x.length(); i++)
+	{
+		if(x[i]==' '||x[i]=='.'||x[i]=='?'||x[i]=='!')
+		c++;
+	
+	    if(x[i]!=' ')
+			cout<<x[i];
+		else if(x[i]==' ')
+			cout<<", ";	
+	}
+	cout<<endl;
+	cout<<"Recenica ima "<<c<<" rijeci.\n";
+	cout<<endl;
+	
+	system("pause");
 	return 0;
 }
